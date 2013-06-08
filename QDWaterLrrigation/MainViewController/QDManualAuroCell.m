@@ -201,7 +201,7 @@
             cellImageView=[[UIImageView alloc]initWithFrame:CGRectMake(5, 10, 80, 80)];
             cellImageView.image=[UIImage imageNamed:@"imgview@2x.png"];
             [cellImageView setUserInteractionEnabled:YES];
-            cellImageView.layer.cornerRadius = 5;
+            cellImageView.layer.cornerRadius = 10;
             cellImageView.layer.masksToBounds = YES;
             [self addSubview:cellImageView];
         
