@@ -234,13 +234,13 @@
             
             
             
-            largestProgressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake(260, 33, 40, 40)];
+            largestProgressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake(255, 28, 50, 50)];
             largestProgressView.tag=5;
             
             [self addSubview:largestProgressView];
             [largestProgressView release];
                     
-            number_label=[[UILabel alloc]initWithFrame:CGRectMake(0, 10, 40, 20)];
+            number_label=[[UILabel alloc]initWithFrame:CGRectMake(5, 15, 40, 20)];
             number_label.tag=6;
             number_label.textAlignment=NSTextAlignmentCenter;
             number_label.font=[UIFont systemFontOfSize:15];
@@ -248,7 +248,7 @@
             [largestProgressView addSubview:number_label];
             [number_label release];
             
-            UIButton *butt=[[UIButton alloc]initWithFrame:CGRectMake(260, 5, 40, 40)];
+            UIButton *butt=[[UIButton alloc]initWithFrame:CGRectMake(250, 15, 60, 70)];
             [butt addTarget:self action:@selector(mudifyTimealter) forControlEvents:UIControlEventTouchUpInside];
             [self addSubview:butt];
             [butt release];
