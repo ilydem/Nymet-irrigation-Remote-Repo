@@ -216,6 +216,7 @@
         
         imageview=[[UIImageView alloc]initWithImage:image];
         imageview.frame=CGRectMake(0, 0, 40, 40);
+        [imageview setBackgroundColor:[UIColor blackColor]];
         [imageview setUserInteractionEnabled:YES];
         UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickImageViewgotoCamera)];
         [imageview addGestureRecognizer:tap];
