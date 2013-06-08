@@ -733,7 +733,7 @@
     current_label=[[UILabel alloc]initWithFrame:CGRectMake(95, 142, 40, 20)];
     current_label.backgroundColor=[UIColor clearColor];
     current_label.textAlignment =NSTextAlignmentCenter;
-    current_label.font=[UIFont systemFontOfSize:12];
+    current_label.font=[UIFont systemFontOfSize:15];
     [self.view addSubview:current_label];
     [current_label release];
     
@@ -748,7 +748,7 @@
     Weather_label=[[UILabel alloc]initWithFrame:CGRectMake(160, 142, 60, 20)];
     Weather_label.backgroundColor=[UIColor clearColor];
     Weather_label.textAlignment =NSTextAlignmentCenter;
-    Weather_label.font=[UIFont systemFontOfSize:12];
+    Weather_label.font=[UIFont systemFontOfSize:15];
     [self.view addSubview:Weather_label];
     [Weather_label release];
     operationQueue =[[NSOperationQueue alloc]init];

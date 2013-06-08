@@ -79,7 +79,7 @@
         //current
         current_laber=[[UILabel alloc]initWithFrame:CGRectMake(95, 40, 40, 20)];
         current_laber.textAlignment=NSTextAlignmentCenter;
-        current_laber.font=[UIFont systemFontOfSize:12];
+        current_laber.font=[UIFont systemFontOfSize:15];
         current_laber.backgroundColor=[UIColor clearColor];
         [self addSubview:current_laber];
         [current_laber release];
@@ -87,7 +87,7 @@
         //average
         average_laber=[[UILabel alloc]initWithFrame:CGRectMake(130, 40, 40, 20)];
         average_laber.textAlignment=NSTextAlignmentCenter;
-        average_laber.font=[UIFont systemFontOfSize:12];
+        average_laber.font=[UIFont systemFontOfSize:15];
         average_laber.backgroundColor=[UIColor clearColor];
         [self addSubview:average_laber];
         [average_laber release];
@@ -95,21 +95,21 @@
         //Weather
         weather_laber=[[UILabel alloc]initWithFrame:CGRectMake(170, 40, 40, 20)];
         weather_laber.textAlignment=NSTextAlignmentCenter;
-        weather_laber.font=[UIFont systemFontOfSize:12];
+        weather_laber.font=[UIFont systemFontOfSize:15];
         weather_laber.backgroundColor=[UIColor clearColor];
         [self addSubview:weather_laber];
         [weather_laber release];
         
         
-        largestProgressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake(210, 30, 40, 40)];
-        
+        largestProgressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake(205, 25, 50, 50)];
+               
         [self addSubview:largestProgressView];
         [largestProgressView release];
         
         
         
         
-        number_label=[[UILabel alloc]initWithFrame:CGRectMake(0, 10, 40, 20)];
+        number_label=[[UILabel alloc]initWithFrame:CGRectMake(5, 15, 40, 20)];
         number_label.textAlignment=NSTextAlignmentCenter;
         number_label.font=[UIFont systemFontOfSize:15];
         number_label.backgroundColor=[UIColor clearColor];
