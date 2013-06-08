@@ -47,7 +47,7 @@
     Auto_VC.tabBarItem = item_Auto;
     [item_Auto release];
     
-    UITabBarItem *item_Setting = [[UITabBarItem alloc] initWithTitle:@"Setting" image:[UIImage imageNamed:@"icon_setting.png"] tag:SETTINGBAR];  
+    UITabBarItem *item_Setting = [[UITabBarItem alloc] initWithTitle:@"Settings" image:[UIImage imageNamed:@"icon_setting.png"] tag:SETTINGBAR];  
     Setting_VC.tabBarItem = item_Setting;
     [item_Setting release];
     

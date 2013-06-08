@@ -142,7 +142,7 @@
     UILabel *title_label=[[UILabel alloc]initWithFrame:CGRectMake(120, 0, 110, 40)];
     title_label.backgroundColor=[UIColor clearColor];
     title_label.textColor=[UIColor whiteColor];
-    title_label.text=@"Setting";
+    title_label.text=@"Settings";
     title_label.font=[UIFont systemFontOfSize:25];
     [self.view addSubview:title_label];
     [title_label release];
