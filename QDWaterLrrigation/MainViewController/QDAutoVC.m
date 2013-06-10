@@ -1,7 +1,7 @@
 
 
 #import "QDAutoVC.h"
-#define AUTOACTI 1
+#define AUTOACTI 118
 @interface QDAutoVC ()
 {
     QDCamera *camer;

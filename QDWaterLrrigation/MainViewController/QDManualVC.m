@@ -1,7 +1,7 @@
 
 
 #import "QDManualVC.h"
-#define MANUALSTART 1
+#define MANUALSTART 118
 #define MANUALSTOP 2
 #define STARTBT 3
 

@@ -1,7 +1,7 @@
 
 
 #import "QDSummaryVC.h"
-#define QDMRC 1
+#define QDMRC 118
 @interface QDSummaryVC ()
 {
     UILabel *program_label;
