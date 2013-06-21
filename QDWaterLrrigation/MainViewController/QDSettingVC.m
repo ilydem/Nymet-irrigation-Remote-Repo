@@ -488,13 +488,13 @@
                 case 1:
                     cell.selectionStyle=UITableViewCellSelectionStyleNone;
                     cell.textLabel.text=@"Flow Sensor Calibration";
-                    flow_Field=[[UITextField alloc]initWithFrame:CGRectMake(240, 5, 60, 30)];
+                    flow_Field=[[UITextField alloc]initWithFrame:CGRectMake(230, 5, 70, 30)];
                     flow_Field.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
                     flow_Field.layer.borderColor =[[UIColor colorWithWhite:200/255.0 alpha:1.0]CGColor];
                     flow_Field.layer.borderWidth = 1.5;
                     flow_Field.layer.cornerRadius = 5;
                     flow_Field.text=[str_dic objectForKey:@"flowSensorCalibration"];
-                    flow_Field.keyboardType=UIKeyboardTypeNumberPad;
+                    flow_Field.keyboardType=UIKeyboardTypeDecimalPad;
                     flow_Field.textAlignment =NSTextAlignmentCenter;
                     flow_Field.layer.masksToBounds = YES;
                     flow_Field.delegate=self;
@@ -732,24 +732,17 @@
         if (textField.tag==3)
         {
             NSString *theStr = [NSString stringWithFormat:@"%@%@",textField.text,string];
+            if ([theStr isEqualToString:@"."]) return NO;
+            if ([theStr length]==2 && [[theStr substringToIndex:1]isEqualToString:@"0"] && ![[theStr substringFromIndex:1]isEqualToString:@"."]) return NO;
+            if ([theStr length]>2 && [[theStr substringWithRange:NSMakeRange(1, 1)]isEqual:@"."] && [[theStr substringFromIndex:[theStr length]-1]isEqualToString:@"."]) return NO;
             switch ([theStr length])
             {
                 case 1:
-                {
-                    return YES;
-                }
-                    break;
                 case 2:
-                {
-                    return YES;
-                }
-                    break;
                 case 3:
-                {
-                    return YES;
-                }
-                    break;
                 case 4:
+                case 5:
+                case 6:
                 {
                     return YES;
                 }
@@ -814,10 +807,10 @@
             [self tabviewAnimationsBegin];
             break;
         case 3:
-                        
+            
             [tab scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:4] atScrollPosition:UITableViewScrollPositionTop animated:NO];
             [self tabviewAnimationsBegin];
-            break;
+            return;
         case 206:
             [tab scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:4] atScrollPosition:UITableViewScrollPositionTop animated:NO];
             [self tabviewAnimationsBegin];
