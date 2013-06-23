@@ -73,7 +73,7 @@
     UILabel *title_label=[[UILabel alloc]initWithFrame:CGRectMake(90, 0, 200, 40)];
     title_label.backgroundColor=[UIColor clearColor];
     title_label.textColor=[UIColor whiteColor];
-    title_label.text=@"Select Sensor";
+    title_label.text=@"Select Zone";
     title_label.font=[UIFont systemFontOfSize:25];
     [self.view addSubview:title_label];
     [title_label release];
@@ -102,7 +102,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
+    selfrow = [indexPath row];
+    IDSelectSensorVC *new = [[IDSelectSensorVC alloc] init];
+    new.viewrow = [indexPath row];
+    new.parentVC = self;
+    [self.navigationController pushViewController:[new autorelease] animated:YES];
   //  [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
     
 //    for (UITableViewCell *cell in tableView.visibleCells)
@@ -120,7 +125,6 @@
 //        }
 //    }
     
-    
 }
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -130,7 +134,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 40.0;
+    return 48.0;
     
 }
 
@@ -151,10 +155,12 @@
         
         cell =[[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier]autorelease];
         cell.tag=[indexPath row];
-        cell.textLabel.text =[arr objectAtIndex:[indexPath row]];
-        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        cell.textLabel.text = [NSString stringWithFormat:@"Zone %@:", [arr objectAtIndex:[indexPath row]]];
+        cell.selectionStyle=UITableViewCellSelectionStyleBlue;
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+
         
-        cell_flow=[[QDCellFlowSenorView alloc]initWithFrame:CGRectMake(120, 3, 180, 32)];
+        cell_flow=[[QDCellFlowSenorView alloc]initWithFrame:CGRectMake(100, (cell.frame.size.height-32)/2 + 1, 210, 32)];
 
         cell_flow.label.text=[[[NSUserDefaults standardUserDefaults]objectForKey:@"flowsensorsetup"]objectAtIndex:[indexPath row]];
         cell_flow.delegate=self;
@@ -207,7 +213,6 @@
     [selectRequest requestselectSensor:select_dic];
     UIView *vi=[self.view viewWithTag:200];
     [vi removeFromSuperview];
-    
 }
 
 -(void)clickBTSelectSensor:(UIButton *)bu viewrow:(int)ro
@@ -228,7 +233,7 @@
         UIButton *bt=[UIButton buttonWithType:UIButtonTypeCustom];
         
         [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        bt.frame=CGRectMake(0, i*32, 150, 32);
+        bt.frame=CGRectMake(0, i*32, 200, 32);
         [bt addTarget:self action:@selector(selectTitleAlread:) forControlEvents:UIControlEventTouchUpInside];
         bt.layer.borderWidth=.5;
         bt.layer.borderColor=[UIColor whiteColor].CGColor;
@@ -239,23 +244,23 @@
     
     if (ro==108)
     {
-        vi.frame=CGRectMake(120, 42+(ro-100)*30, 150, 32*[workPlaceArray count]);
+        vi.frame=CGRectMake(100, 42+(ro-100)*30, 200, 32*[workPlaceArray count]);
     }
     else
     {
         if (ro==109)
         {
-            vi.frame=CGRectMake(120, 52+(ro-100)*30, 150, 32*[workPlaceArray count]);
+            vi.frame=CGRectMake(100, 52+(ro-100)*30, 200, 32*[workPlaceArray count]);
         }
         else
         {
             if (ro==107)
             {
-                vi.frame=CGRectMake(120, (ro-100)*40-37, 150, 32*[workPlaceArray count]);
+                vi.frame=CGRectMake(100, (ro-100)*40-37, 200, 32*[workPlaceArray count]);
             }
             else
             {
-              vi.frame=CGRectMake(120, 83+(ro-100)*40, 150, 32*[workPlaceArray count]);
+              vi.frame=CGRectMake(100, 90+(ro-100)*48, 200, 32*[workPlaceArray count]);
             }
            
         }

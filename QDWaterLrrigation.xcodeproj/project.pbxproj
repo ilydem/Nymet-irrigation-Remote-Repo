@@ -135,6 +135,7 @@
 		D0966BFA1761E303000702E4 /* ID_title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0966BF81761E303000702E4 /* ID_title@2x.png */; };
 		D099227A1758B9B90031DF09 /* watericon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = D09922791758B9B90031DF09 /* watericon57x57.png */; };
 		D09ADDFF175F506B00D53587 /* ID_allstatebar.png in Resources */ = {isa = PBXBuildFile; fileRef = D09ADDFE175F506B00D53587 /* ID_allstatebar.png */; };
+		D0B35E3017747C5600BC1FCF /* IDSelectSensorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B35E2F17747C5500BC1FCF /* IDSelectSensorVC.m */; };
 		D0CD9D3C1761EF9F00922FF5 /* ID_autobar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CD9D3B1761EF9F00922FF5 /* ID_autobar@2x.png */; };
 		D0CE9BA51760DACC00275640 /* ID_masterw1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CE9BA41760DACB00275640 /* ID_masterw1.png */; };
 		F0089D4E16BBCA5C0033ED5B /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = F0089D4D16BBCA5C0033ED5B /* tap.aif */; };
@@ -306,6 +307,8 @@
 		D0966BF81761E303000702E4 /* ID_title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ID_title@2x.png"; path = "QDResources/Image/ID_title@2x.png"; sourceTree = "<group>"; };
 		D09922791758B9B90031DF09 /* watericon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = watericon57x57.png; path = QDResources/Image/watericon57x57.png; sourceTree = "<group>"; };
 		D09ADDFE175F506B00D53587 /* ID_allstatebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ID_allstatebar.png; path = QDResources/Image/ID_allstatebar.png; sourceTree = "<group>"; };
+		D0B35E2E17747C5400BC1FCF /* IDSelectSensorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDSelectSensorVC.h; path = MainViewController/IDSelectSensorVC.h; sourceTree = "<group>"; };
+		D0B35E2F17747C5500BC1FCF /* IDSelectSensorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDSelectSensorVC.m; path = MainViewController/IDSelectSensorVC.m; sourceTree = "<group>"; };
 		D0CD9D3B1761EF9F00922FF5 /* ID_autobar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ID_autobar@2x.png"; path = "QDResources/Image/ID_autobar@2x.png"; sourceTree = "<group>"; };
 		D0CE9BA41760DACB00275640 /* ID_masterw1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ID_masterw1.png; path = QDResources/Image/ID_masterw1.png; sourceTree = "<group>"; };
 		F0089D4D16BBCA5C0033ED5B /* tap.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.aif; sourceTree = "<group>"; };
@@ -379,6 +382,8 @@
 			children = (
 				238F4A8316378F1100DCBBCD /* QDSettingVC.h */,
 				238F4A8416378F1100DCBBCD /* QDSettingVC.m */,
+				D0B35E2E17747C5400BC1FCF /* IDSelectSensorVC.h */,
+				D0B35E2F17747C5500BC1FCF /* IDSelectSensorVC.m */,
 				231BF309164C9C0C00C08611 /* QDSelectSensorVC.h */,
 				231BF30A164C9C0C00C08611 /* QDSelectSensorVC.m */,
 				234B89501651F96F006A3E9F /* QD24VacorPulseVC.h */,
@@ -825,6 +830,7 @@
 				23595DA3168FD8BD00551FD7 /* DCRoundSwitchToggleLayer.m in Sources */,
 				23FE55C616B910490037139E /* QDSystem.m in Sources */,
 				F064FFA5171661FA0015841A /* QDDetectServer.m in Sources */,
+				D0B35E3017747C5600BC1FCF /* IDSelectSensorVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

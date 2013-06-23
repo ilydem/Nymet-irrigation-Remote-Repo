@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "QDCellFlowSenorView.h"
 #import "QDNetRequstData.h"
+#import "IDSelectSensorVC.h"
 
 @interface QDSelectSensorVC : UIViewController<UITableViewDataSource,UITableViewDelegate,QDCellFlowSenorViewdelegate,QDDatadelegate>
 {
