@@ -144,7 +144,7 @@
     
     click_Weather=[[QDCellFlowSenorView alloc]initWithFrame:CGRectMake(235, 256, 27, 27)];
     click_Weather.delegate=self;
-    [click_Weather.SaveButton setImage:[UIImage imageNamed:@"xialaf.png"] forState:UIControlStateNormal];
+    //[click_Weather.SaveButton setImage:[UIImage imageNamed:@"xialaf.png"] forState:UIControlStateNormal];
     [self.view addSubview:click_Weather];
     [click_Weather release];
 

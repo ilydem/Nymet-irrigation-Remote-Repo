@@ -65,7 +65,7 @@
 }
 -(void)selecterroralertdview:(NSString *)str
 {
-    UIAlertView *aler=[[UIAlertView alloc]initWithTitle:@"error" message:str delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Handle", nil];
+    UIAlertView *aler=[[UIAlertView alloc]initWithTitle:@"Error" message:str delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Handle", nil];
     [aler show];
     [aler release];
 
@@ -578,7 +578,7 @@
         }
         else
         {
-            [Master_BT setTitle:@"error" forState:UIControlStateNormal];
+            [Master_BT setTitle:@"Error" forState:UIControlStateNormal];
             [Master_BT setUserInteractionEnabled:YES];
             err_str =[data_Arr objectAtIndex:19];
             [Master_BT addTarget:self action:@selector(clickerrrorBtvoid) forControlEvents:UIControlEventTouchUpInside];

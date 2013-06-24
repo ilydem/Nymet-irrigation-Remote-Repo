@@ -148,14 +148,14 @@
             [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%i",[indexPath row]] forKey:@"summayr_row"];
             [[NSUserDefaults standardUserDefaults]setObject:[[dic objectAtIndex:[indexPath row]]objectForKey:@"errorCondition"] forKey:@"sumarrayEROR"];
 
-            Error_BT=[[UIButton alloc]initWithFrame:CGRectMake(255, 5, 60, 40)];
+            Error_BT=[[UIButton alloc]initWithFrame:CGRectMake(255, 5, 60, 90)];
             Error_BT.tag=[indexPath row]+200;
             [Error_BT setUserInteractionEnabled:YES];
             [Error_BT setBackgroundColor:[UIColor clearColor]];
             [Error_BT addTarget:self action:@selector(clickErrorBTSummary) forControlEvents:UIControlEventTouchUpInside];
             [cell addSubview:Error_BT];
       
-            cell.Error_laber.text=@"error";
+            cell.Error_laber.text=@"Error";
             cell.Error_laber.textColor=[UIColor redColor];
             
         }
