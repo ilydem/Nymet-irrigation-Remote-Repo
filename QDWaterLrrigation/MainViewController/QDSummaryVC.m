@@ -561,7 +561,14 @@
             {
                 [Sys OpenShock];
                 [Sys playSound];
-                
+                UILocalNotification *notification = [UILocalNotification new];
+                notification.timeZone  = [NSTimeZone systemTimeZone];
+                notification.fireDate  = [[NSDate date] dateByAddingTimeInterval:5.0f];
+                notification.alertAction = @"More info";
+                notification.alertBody = @"Nymet Irrigation Local Notification";
+                notification.soundName = UILocalNotificationDefaultSoundName;
+                [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+                [notification release];
             }
 
         }

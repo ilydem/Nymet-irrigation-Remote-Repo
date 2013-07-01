@@ -12,7 +12,6 @@
 	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>waterilcon.png</string>
 		<string>watericon57x57.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
@@ -33,6 +32,10 @@
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>voip</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

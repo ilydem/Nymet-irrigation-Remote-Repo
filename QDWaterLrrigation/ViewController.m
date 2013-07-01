@@ -39,6 +39,11 @@
     [act removeFromSuperview];
 }
 #pragma mark//用户名和密码验证
+-(void)gotoSummaryVC
+{
+    [self.navigationController pushViewController:[[QDMainVC new]autorelease] animated:YES];
+    [self.tabBarController.navigationController pushViewController:[[QDSummaryVC new]autorelease] animated:YES];
+}
 -(void)gotoNamePasswordVerification
 {
     //[self.navigationController pushViewController:[[QDMainVC new]autorelease] animated:YES];

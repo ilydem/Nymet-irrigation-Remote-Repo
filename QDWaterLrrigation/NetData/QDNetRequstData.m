@@ -1207,6 +1207,7 @@
     GlobalVariables=SUMMARY;
     [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:SUMMARY] forKey:@"GlobalVariables"];
     NSURL *url =[[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@fettel",ALLHTTPURL]];
+    [web_view.request_URL setNetworkServiceType:NSURLNetworkServiceTypeVoIP];
     [web_view.request_URL setURL:url];
     [web_view loadRequest:web_view.request_URL];
     [url release];
