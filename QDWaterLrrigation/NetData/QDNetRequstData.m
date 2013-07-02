@@ -510,12 +510,12 @@
     NSData *login_Data= [self postDataWith:loginPath data:logindataStr];
     if ([login_Data length]!=0)
     {
-        NSLog(@"服务器可达");
+        NSLog(@"服务器可达 -> Server is reachable");
     }
     else
     {
 //        [self netStateByData:login_Data];
-        NSLog(@"服务器不可达");
+        NSLog(@"服务器不可达 -> Server is unreachable");
     }
 
 }

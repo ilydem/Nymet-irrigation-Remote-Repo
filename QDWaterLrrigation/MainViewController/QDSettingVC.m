@@ -288,6 +288,7 @@
     }
 
     [setrequest settingrequesresetolalFlow:tolal_value];
+    [Flow_Reset performSelector:@selector(setOn:animated:) withObject:NO afterDelay:1.0f];
     
 }
 -(void)clickInput2Sw
