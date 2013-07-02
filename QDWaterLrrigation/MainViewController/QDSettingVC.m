@@ -888,7 +888,7 @@
 {
     [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"refreshYN"];
     [self StopActivityIndicatorView];
-    [self StopActivityIndicatorView];
+    Flow_Reset.on = NO;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -959,7 +959,7 @@
         }
         else
         {
-            Flow_Reset.on=YES;
+            //Flow_Reset.on=YES;
         }
         
         if ([[dic objectForKey:@"vacorPulseDCLatching"]isEqualToString:@"0"])
