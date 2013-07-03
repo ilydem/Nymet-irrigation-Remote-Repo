@@ -204,7 +204,8 @@ function getSetting(){
     str+='\"mistDutyCycle\":\"'+table.rows[3].cells[1].getElementsByTagName("input")[0].value+"%"+table.rows[3].cells[1].getElementsByTagName("input")[1].value+"sec"+'\",';
     str+='\"vacorPulseDCLatching\":\"'+(isChecked(document.getElementsByName("mode")[0])==true?document.getElementsByName("mode")[0].value:document.getElementsByName("mode")[1].value)+'\",';
     str+='\"flowRateTolerance\":\"'+table.rows[6].cells[1].getElementsByTagName("input")[0].value+"%"+'\",';
-    str+='\"masterValveDelayTime\":\"'+table.rows[8].cells[1].innerText.trim()+'\",';
+    //str+='\"masterValveDelayTime\":\"'+table.rows[8].cells[1].innerText.trim()+'\",';
+    str+='\"masterValveDelayTime\":\"'+table.rows[8].cells[1].getElementsByTagName("input")[0].value+"sec"+'\",';
     str+='\"zoneDelayTime\":\"'+table.rows[9].cells[1].getElementsByTagName("input")[0].value+"min"+'\",';
     str+='\"flowSensorCalibration\":\"'+table.rows[10].cells[1].getElementsByTagName("input")[0].value+'\",';
     str+='\"input2\":\"'+(isChecked(document.getElementsByName("input2")[0])==true?document.getElementsByName("input2")[0].value:document.getElementsByName("input2")[1].value)+'\",';

@@ -101,8 +101,8 @@
         [Mist_sec_arr addObject:[NSString stringWithFormat:@"%i",mist]];
     }
     
-    int delayTime=24;
-    for (int i=0; i<61; i++)
+    int delayTime=0;//24;
+    for (int i=0; i<61+24; i++)
     {
         delayTime=delayTime +1;
         [Master_Valve_Arr addObject:[NSString stringWithFormat:@"%i",delayTime]];
@@ -429,12 +429,12 @@
                         [cell.textLabel setNumberOfLines:2];
                         cell.textLabel.text=@"Master Valve Delay";
                     MasterField=[[UITextField alloc]initWithFrame:CGRectMake(240, 6, 30, 30)];
-                    [MasterField setUserInteractionEnabled:NO];
+                    [MasterField setUserInteractionEnabled:YES];
                     MasterField.layer.borderColor =[[UIColor colorWithWhite:200/255.0 alpha:1.0]CGColor];
                     MasterField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
                     MasterField.tag=203;
-//                    MasterField.layer.borderWidth = 1.5;
-//                    MasterField.layer.cornerRadius = 5;
+                    MasterField.layer.borderWidth = 1.5;
+                    MasterField.layer.cornerRadius = 5;
                     MasterField.keyboardType=UIKeyboardTypeNumberPad;
                     MasterField.textAlignment =NSTextAlignmentCenter;
                     MasterField.layer.masksToBounds = YES;
@@ -445,7 +445,7 @@
                     
                     UILabel *label_master_Sec=[[UILabel alloc]initWithFrame:CGRectMake(275, 12, 30, 20)];
                     label_master_Sec.backgroundColor=[UIColor clearColor];
-                    label_master_Sec.text=@"Min";
+                    label_master_Sec.text=@"Sec";
                     label_master_Sec.textColor=[UIColor grayColor];
                     [cell addSubview:label_master_Sec];
                     [label_master_Sec release];
@@ -973,8 +973,8 @@
             Latch_Label.text=@"24Vac";
         }
         
-//        MasterField.text=[[dic objectForKey:@"masterValveDelayTime"]stringByReplacingOccurrencesOfString:@"sec" withString:@""];
-        MasterField.text=@"1";
+        MasterField.text=[[[dic objectForKey:@"masterValveDelayTime"]stringByReplacingOccurrencesOfString:@"sec" withString:@""]stringByReplacingOccurrencesOfString:@"min" withString:@""];
+        //MasterField.text=@"1";
         ZDTField.text=[[dic objectForKey:@"zoneDelayTime"]stringByReplacingOccurrencesOfString:@"min" withString:@""];
         flow_Field.text=[dic objectForKey:@"flowSensorCalibration"];
         Rate_Field.text=[[dic objectForKey:@"flowRateTolerance"]stringByReplacingOccurrencesOfString:@"%" withString:@""];
