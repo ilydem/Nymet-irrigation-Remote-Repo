@@ -85,7 +85,7 @@
         [current_laber release];
         
         //average
-        average_laber=[[UILabel alloc]initWithFrame:CGRectMake(130, 40, 40, 20)];
+        average_laber=[[UILabel alloc]initWithFrame:CGRectMake(135, 40, 35, 20)];
         average_laber.textAlignment=NSTextAlignmentCenter;
         average_laber.font=[UIFont systemFontOfSize:15];
         average_laber.backgroundColor=[UIColor clearColor];
@@ -101,7 +101,7 @@
         [weather_laber release];
         
         
-        largestProgressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake(205, 25, 50, 50)];
+        largestProgressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake(207, 25, 50, 50)];
                
         [self addSubview:largestProgressView];
         [largestProgressView release];

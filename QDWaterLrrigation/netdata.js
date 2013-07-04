@@ -48,6 +48,7 @@ function getSummaryOfSummaryByMasterValve(){
     var table=document.getElementsByTagName('table')[5];
     var str='{';
     str+='\"totalWaterUsed\":\"'+table.rows[2].cells[2].innerText+'\",';
+    str+='\"averageFlow\":\"'+table.rows[2].cells[3].innerText+'\",';
     str+='\"currentFlow\":\"'+table.rows[2].cells[4].innerText+'\"';
     str+='}';
     return str;

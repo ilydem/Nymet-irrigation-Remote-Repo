@@ -6,7 +6,8 @@
 {
     UILabel *program_label;
     UILabel *current_label;
-    UILabel *Weather_label;
+    UILabel *totalused_label;
+    UILabel *average_label;
     QDSummaryView *summary_View;
     NSOperationQueue *operationQueue;
     NSMutableArray *mutab_Arr;
@@ -82,7 +83,8 @@
     if (summary_View)
     {
         program_label.text =strProm;
-        current_label.text =[Master_dic objectForKey:@"totalWaterUsed"] ;
+        current_label.text =[Master_dic objectForKey:@"totalWaterUsed"];
+        average_label.text =[Master_dic objectForKey:@"averageFlow"];
         summary_View.dic=list_dic;
         summary_View.im_Data=mutab_Arr;
         [summary_View.tab reloadData];
@@ -92,6 +94,7 @@
     {
         program_label.text =strProm;
         current_label.text =[Master_dic objectForKey:@"totalWaterUsed"];
+        average_label.text =[Master_dic objectForKey:@"averageFlow"];
         summary_View=[[QDSummaryView alloc]initWithFrame:CGRectMake(0, 174, 320, self.view.frame.size.height-174)];
         summary_View.dic=list_dic;
         summary_View.im_Data=mutab_Arr;
@@ -103,19 +106,19 @@
     }
     if ([[Master_dic objectForKey:@"currentFlow"] intValue]>99999&&[[Master_dic objectForKey:@"currentFlow"] intValue]<999999)
     {
-        Weather_label.text =[NSString stringWithFormat:@"%.2f%@",[[Master_dic objectForKey:@"currentFlow"] floatValue]/1000,@"k"];
+        totalused_label.text =[NSString stringWithFormat:@"%.2f%@",[[Master_dic objectForKey:@"currentFlow"] floatValue]/1000,@"k"];
         
     }
     else
     {
         if ([[Master_dic objectForKey:@"currentFlow"] intValue]>999999)
         {
-            Weather_label.text =[NSString stringWithFormat:@"%.2f%@",[[Master_dic objectForKey:@"currentFlow"] floatValue]/1000000,@"m"];
+            totalused_label.text =[NSString stringWithFormat:@"%.2f%@",[[Master_dic objectForKey:@"currentFlow"] floatValue]/1000000,@"m"];
 
         }
         else
         {
-            Weather_label.text =[Master_dic objectForKey:@"currentFlow"];
+            totalused_label.text =[Master_dic objectForKey:@"currentFlow"];
         }
         
     }
@@ -752,12 +755,21 @@
     [self.view addSubview:master_label];
     [master_label release];
     
-    Weather_label=[[UILabel alloc]initWithFrame:CGRectMake(160, 142, 60, 20)];
-    Weather_label.backgroundColor=[UIColor clearColor];
-    Weather_label.textAlignment =NSTextAlignmentCenter;
-    Weather_label.font=[UIFont systemFontOfSize:15];
-    [self.view addSubview:Weather_label];
-    [Weather_label release];
+    //Average flow
+    average_label=[[UILabel alloc]initWithFrame:CGRectMake(135, 142, 35, 20)];
+    average_label.backgroundColor=[UIColor clearColor];
+    average_label.textAlignment =NSTextAlignmentCenter;
+    average_label.font=[UIFont systemFontOfSize:15];
+    [self.view addSubview:average_label];
+    [average_label release];
+    
+    
+    totalused_label=[[UILabel alloc]initWithFrame:CGRectMake(170, 142, 40, 20)];
+    totalused_label.backgroundColor=[UIColor clearColor];
+    totalused_label.textAlignment =NSTextAlignmentCenter;
+    totalused_label.font=[UIFont systemFontOfSize:15];
+    [self.view addSubview:totalused_label];
+    [totalused_label release];
     operationQueue =[[NSOperationQueue alloc]init];
     
     //拍照的类
