@@ -924,12 +924,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Caretti (58474S847N)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Peter Caretti (58474S847N)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QDWaterLrrigation/QDWaterLrrigation-Prefix.pch";
 				INFOPLIST_FILE = "QDWaterLrrigation/QDWaterLrrigation-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "F6A9F4A2-662E-4852-9BFD-2A2BCE95E173";
+				"PROVISIONING_PROFILE[sdk=*]" = "F6A9F4A2-662E-4852-9BFD-2A2BCE95E173";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -940,12 +942,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Peter Caretti (RV359S38W9)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Peter Caretti (RV359S38W9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QDWaterLrrigation/QDWaterLrrigation-Prefix.pch";
 				INFOPLIST_FILE = "QDWaterLrrigation/QDWaterLrrigation-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "FAFDAA68-FEA7-4E3F-A27D-A066BC6E0BA4";
+				"PROVISIONING_PROFILE[sdk=*]" = "B0D40A29-0623-4387-9BE2-57D1CADDBA0D";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
